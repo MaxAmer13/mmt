@@ -1,9 +1,11 @@
 <template>
     <div class="Tournament">
         <label>
-            Tournoi de Jean
+            {{ libelTournoi }}
         </label>
-        <label>0/64</label>
+        <label> {{ libelSport }}</label>
+        <label>0/ {{ nombreparticipant }} </label>
+        <button class="form-btn">Voir les participations</button>
     </div>
 </template>
 
@@ -11,6 +13,8 @@
 export default {
   name: 'MesTournois',
   props: {
+  },methods: {
+
   }
 }
 </script>

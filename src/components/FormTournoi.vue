@@ -16,7 +16,7 @@
                 </select>
                 <input type="text" placeholder="Nombre de Participants" class="input" v-model="tournoi.NbParticipant" required/>
                 <input type="date" class="input" v-model="tournoi.dateT" required/>
-                <button class="form-btn" @click="UpdateTourn">Créer</button>
+                <button class="form-btn" @click.prevent="UpdateTourn">Créer</button>
             </form>
         </div>
     </div>
@@ -47,6 +47,7 @@ export default {
       form.append('nbParticipant', JSON.stringify(this.tournoi.NbParticipant))
       form.append('date', JSON.stringify(this.tournoi.dateT))
       form.append('sport', JSON.stringify(this.tournoi.Sport))
+      form.append('idUtilisateur',JSON.stringify(localStorage.getItem('id')))
 
       fetch('http://localhost/mmt/backend/InsertTournoi.php', {
 

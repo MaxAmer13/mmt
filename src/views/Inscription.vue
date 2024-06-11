@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'Inscription',
+  name: 'InscriPtion',
   data () {
     return {
       utilisateur: {
